@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.pages.index');
+        $cidades = Categoria::latest();
+        return view('home.pages.index', compact('cidades'));
     }
 
     /**

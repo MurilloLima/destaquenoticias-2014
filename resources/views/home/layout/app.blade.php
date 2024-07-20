@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('home/css/style.css') }}">
 
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-
+    <link rel="icon" type="image/png" href="{{ asset('home/images/icon.png') }}" />
     <style>
         .theiaStickySidebar:after {
             content: "";
