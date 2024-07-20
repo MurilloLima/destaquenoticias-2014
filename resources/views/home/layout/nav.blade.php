@@ -322,78 +322,27 @@
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <div class="row">
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s37.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tennis</a>
+                                     @foreach ($classificados as $item)
+                                         <div class="col-lg-3 col-md-6">
+                                             <div class="news-post standart-post">
+                                                 <div class="post-image">
+                                                     <a href="https://nunforest.com/minberi-mag/single-post">
+                                                         <img src="{{ asset('home/upload/blog/s37.jpg') }}"
+                                                             alt="">
+                                                     </a>
+                                                     <a href="#" class="category category-tech">Classificado</a>
+                                                 </div>
+                                                 <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                                 <ul class="post-tags">
+                                                     <li><i class="lnr lnr-user"></i>by <a href="index.html#">John
+                                                             Doe</a>
+                                                     </li>
+                                                     <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
+                                                                 comments</span></a></li>
+                                                 </ul>
                                              </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
                                          </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s38.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s39.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s2.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
+                                     @endforeach
                                  </div>
                              </div>
                          </div>

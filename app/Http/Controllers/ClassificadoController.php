@@ -1,25 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Categoria;
 use App\Models\Classificado;
-use App\Models\Noticia;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ClassificadoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cidades = Categoria::latest()->get();
-        $classificados = Classificado::latest()->get();
-        $noticias1 = Noticia::latest()->limit(1)->get();
-        $noticias6 = Noticia::latest()->limit(6)->get();
-        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6'));
+        //
     }
 
     /**
@@ -41,7 +34,7 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Classificado $classificado)
     {
         //
     }
@@ -49,7 +42,7 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Classificado $classificado)
     {
         //
     }
@@ -57,7 +50,7 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Classificado $classificado)
     {
         //
     }
@@ -65,7 +58,7 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Classificado $classificado)
     {
         //
     }
