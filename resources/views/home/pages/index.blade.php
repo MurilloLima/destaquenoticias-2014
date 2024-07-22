@@ -2,8 +2,6 @@
 @section('title', 'Home')
 
 @section('content')
-
-
     <!-- wide-news-heading
                                                                                                                                    ================================================== -->
     <div class="wide-news-heading">
@@ -18,7 +16,7 @@
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
                                     <a href="#" class="category category">{{ $item->categoria->name }}</a>
-                                    <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                    <h2><a href="#">{{ $item->title }}</a></h2>
                                     <ul class="post-tags">
                                         <li>
                                             <i class="lnr lnr-user"></i>
@@ -39,7 +37,7 @@
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
                         <a href="#" class="category category-world">{{ $item->categoria->name }}</a>
-                        <h2><a href="single-post.html">{{ $item->title }}</h2>
+                        <h2><a href="#">{{ $item->title }}</h2>
                         <ul class="post-tags">
                             <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
                             {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
@@ -77,7 +75,7 @@
                                             <a href="#" class="category category-tech"
                                                 style="background-color: #1866CF;">{{ $item->categoria->name }}</a>
                                         </div>
-                                        <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                        <h2><a href="#">{{ $item->title }}</a></h2>
                                         <ul class="post-tags">
                                             <li>
                                                 <i class="lnr lnr-user"></i>
@@ -92,86 +90,7 @@
                             @endforeach
 
                         </div>
-                        {{-- <div class="row">
-                            <div class="col-sm-6">
-                                <div class="news-post standart-post">
-                                    <div class="post-image">
-                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                            <img src="{{ asset('home/upload/blog/s3.jpg') }}" alt="">
-                                        </a>
-                                        <a href="index.html#" class="category category-world">Lifestyle</a>
-                                    </div>
-                                    <h2><a href="single-post.html">Hapier Child</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
-                                        </li>
-                                        <li><i class="lnr lnr-eye"></i>872 Views</li>
-                                    </ul>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="news-post standart-post">
-                                    <div class="post-image">
-                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                            <img src="{{ asset('home/upload/blog/s5.jpg') }}" alt="">
-                                        </a>
-                                        <a href="index.html#" class="category category-food">Food</a>
-                                    </div>
-                                    <h2><a href="single-post.html">Fruits and Vegetables</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
-                                        </li>
-                                        <li><i class="lnr lnr-eye"></i>872 Views</li>
-                                    </ul>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="news-post standart-post">
-                                    <div class="post-image">
-                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                            <img src="{{ asset('home/upload/blog/s6.jpg') }}" alt="">
-                                        </a>
-                                        <a href="index.html#" class="category category-world">World</a>
-                                    </div>
-                                    <h2><a href="single-post.html">United States celebrate</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
-                                        </li>
-                                        <li><i class="lnr lnr-eye"></i>872 Views</li>
-                                    </ul>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="news-post standart-post">
-                                    <div class="post-image">
-                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                            <img src="{{ asset('home/upload/blog/s8.jpg') }}" alt="">
-                                        </a>
-                                        <a href="index.html#" class="category category-tech">Tech</a>
-                                    </div>
-                                    <h2><a href="single-post.html">Technology Remote Jobs</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                        <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a>
-                                        </li>
-                                        <li><i class="lnr lnr-eye"></i>872 Views</li>
-                                    </ul>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                            </div>
-                        </div> --}}
+                       
 
                     </div>
                     <!-- End Posts-block -->
@@ -192,12 +111,12 @@
                                                     <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                         style="height: 200px;" alt="">
                                                 </a>
-                                                <a href="index.html#" class="category category-fashion">categiria</a>
+                                                <a href="#" class="category category-fashion">categiria</a>
                                             </div>
                                             <h2><a href="">Autumn wear ...</a></h2>
                                             <ul class="post-tags">
-                                                <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a></li>
-                                                <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
+                                                <li><i class="lnr lnr-user"></i>by <a href="#">John Doe</a></li>
+                                                <li><a href="#"><i class="lnr lnr-book"></i><span>23
                                                             comments</span></a></li>
                                             </ul>
                                         </div>
@@ -211,7 +130,7 @@
 
                     <!-- Advertisement -->
                     <div class="advertisement">
-                        <a href="index.html#"><img src="{{ asset('upload/addsense/620x80grey.jpg') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('upload/addsense/620x80grey.jpg') }}" alt=""></a>
                     </div>
                     <!-- End Advertisement -->
 
@@ -281,7 +200,7 @@
                             <p>Quer ser informado sempre com nossas últimas novidades?</p>
                             <ul class="social-share">
                                 <li>
-                                    <a href="index.html#" class="rss">
+                                    <a href="#" class="rss">
                                         <i class="fa fa-rss"></i>
                                         <span>345</span>
                                     </a>
@@ -293,13 +212,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#" class="twitter">
+                                    <a href="#" class="twitter">
                                         <i class="fa fa-twitter"></i>
                                         <span>5,600</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#" class="google">
+                                    <a href="#" class="google">
                                         <i class="fa fa-google-plus"></i>
                                         <span>659</span>
                                     </a>
@@ -312,11 +231,11 @@
                             <ul class="small-posts">
                                 @foreach ($random as $item)
                                     <li>
-                                        <a href="single-post.html">
+                                        <a href="#">
                                             <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                         </a>
                                         <div class="post-cont">
-                                            <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                            <h2><a href="#">{{ $item->title }}</a></h2>
                                             {{-- <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
                                             </ul> --}}
@@ -327,7 +246,7 @@
                         </div>
 
                         <div class="advertisement">
-                            <a href="index.html#"><img src="{{ asset('home/upload/addsense/300x250.jpg') }}"
+                            <a href="#"><img src="{{ asset('home/upload/addsense/300x250.jpg') }}"
                                     alt=""></a>
                         </div>
 
@@ -336,7 +255,7 @@
                             <h1>Tags</h1>
                             <ul class="tags-list">
                                 @foreach ($categorias as $item)
-                                    <li><a href="index.html#">{{ $item->name }}</a></li>
+                                    <li><a href="#">{{ $item->name }}</a></li>
                                 @endforeach
 
                             </ul>
@@ -365,7 +284,7 @@
                                         <img src="upload/blog/s1.jpg" alt="">
                                     </a>
                                 </div>
-                                <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                                <h2><a href="">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
                             </div>
                         </div>
                         @if ($classificados == 0)
