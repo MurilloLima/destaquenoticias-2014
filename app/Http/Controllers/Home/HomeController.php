@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Classificado;
 use App\Models\Noticia;
+use App\Models\Publicidade;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +27,10 @@ class HomeController extends Controller
         $categorias = Categoria::all();
         $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
-        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape'));
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+
+        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade'));
     }
 
     /**

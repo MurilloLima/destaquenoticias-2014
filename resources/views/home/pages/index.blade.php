@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- wide-news-heading
-                                                                                                                                   ================================================== -->
+                                                                                                                                               ================================================== -->
     <div class="wide-news-heading">
 
         <div class="item main-news">
@@ -50,7 +50,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                   ================================================== -->
+                                                                                                                                               ================================================== -->
     <section id="content-section">
         <div class="container">
 
@@ -90,7 +90,7 @@
                             @endforeach
 
                         </div>
-                       
+
 
                     </div>
                     <!-- End Posts-block -->
@@ -111,13 +111,12 @@
                                                     <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                         style="height: 200px;" alt="">
                                                 </a>
-                                                <a href="#" class="category category-fashion">categiria</a>
+                                                <a href="#"
+                                                    class="category category-fashion">{{ $item->categoria->name }}</a>
                                             </div>
-                                            <h2><a href="">Autumn wear ...</a></h2>
+                                            <h2><a href="">{{ $item->title }}</a></h2>
                                             <ul class="post-tags">
-                                                <li><i class="lnr lnr-user"></i>by <a href="#">John Doe</a></li>
-                                                <li><a href="#"><i class="lnr lnr-book"></i><span>23
-                                                            comments</span></a></li>
+                                                <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -274,22 +273,19 @@
 
             <!-- more from news box -->
             <div class="more-from-news">
-                <h1>CLASSIFICADOS</h1>
+                <h1>APOIO</h1>
                 <div class="row">
-                    @foreach ($classificados as $item)
+                    @foreach ($publicidade as $item)
                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                             <div class="news-post thumb-post">
                                 <div class="post-image">
-                                    <a href="https://nunforest.com/minberi-mag/single-post">
-                                        <img src="upload/blog/s1.jpg" alt="">
+                                    <a href="#">
+                                        <img src="{{ asset('upload/publicidade/' . $item->img) }}" alt=""
+                                            style="width: 100%; height: 100px;">
                                     </a>
                                 </div>
-                                <h2><a href="">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
                             </div>
                         </div>
-                        @if ($classificados == 0)
-                            nada
-                        @endif
                     @endforeach
                 </div>
             </div>

@@ -8,10 +8,13 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget text-widget">
-                            <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h1>
+                                <a href="?">
+                                    <img src="{{ asset('home/images/logo.png') }}" width="100" alt=""></a>
+                            </h1>
+                            <p>
+                                O diário de notícias na internet trazendo notícias em geral.
+                            </p>
                             <ul class="social-icons">
                                 <li><a class="facebook" href="index.html#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a class="twitter" href="index.html#"><i class="fa fa-twitter"></i></a></li>
@@ -52,11 +55,12 @@
                             <div class="news-post standart-post">
                                 <div class="post-image">
                                     <a href="">
-                                        <img src="{{ asset('home/upload/blog/s28.jpg') }}" alt="">
+                                        <img src="{{ asset('upload/noticias/' . $destaque->img) }}" alt="">
                                     </a>
-                                    <a href="#" class="category category-travel">asdsa</a>
+                                    <a href="#"
+                                        class="category category-travel">{{ $destaque->categoria->name }}</a>
                                 </div>
-                                <h2><a href="">Visiting antic countries is John Doe hobby.</a></h2>
+                                <h2><a href="">{{ $destaque->title }}</a></h2>
                                 <ul class="post-tags">
                                     <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
                                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a> --}}

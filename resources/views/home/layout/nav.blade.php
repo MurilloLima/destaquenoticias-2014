@@ -101,21 +101,21 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link sport" href="index.html#">Esporte <i class="fa fa-angle-down"
+                         <a class="nav-link sport" href="#">Esporte <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <ul class="filter-list">
-                                     <li><a href="index.html#">Visualizar todas</a></li>
+                                     <li><a href="#">Visualizar todas</a></li>
                                  </ul>
                                  <div class="row">
                                      @foreach ($esporte as $item)
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
-                                                 <div class="post-image">
+                                                 <div class="post-image" style="height: 100">
                                                      <a href="">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
-                                                             alt="">
+                                                             alt="" style="width: 100%;" height="150px">
                                                      </a>
                                                      <a href="index.html#"
                                                          class="category category-sport">{{ $item->categoria->name }}</a>
