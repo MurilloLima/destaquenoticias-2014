@@ -17,9 +17,15 @@ class HomeController extends Controller
     {
         $cidades = Categoria::latest()->get();
         $classificados = Classificado::latest()->get();
-        $noticias1 = Noticia::latest()->limit(1)->get();
+        $noticias1 = Noticia::latest()->first();
         $noticias6 = Noticia::latest()->limit(6)->get();
-        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6'));
+        $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
+        $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
+        $noticiaslider = Noticia::latest()->limit(3)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
+        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem'));
     }
 
     /**

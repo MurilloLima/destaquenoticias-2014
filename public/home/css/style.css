@@ -1564,10 +1564,12 @@ ul.post-tags li:last-child {
 .standart-post .post-image {
   position: relative;
   margin-bottom: 14px;
+  
 }
 
 .standart-post .post-image a {
   display: block;
+ 
 }
 
 .standart-post .post-image a img {
@@ -1653,6 +1655,7 @@ ul.post-tags li:last-child {
 .alternative-post .post-image {
   position: relative;
   margin-bottom: 10px;
+ 
 }
 
 .alternative-post .post-image a {
@@ -1832,9 +1835,12 @@ ul.post-tags li:last-child {
 }
 
 .large-image-post {
+  width: 600px;
+  height: 365px;
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+ 
 }
 
 .large-image-post img {
@@ -1960,6 +1966,7 @@ ul.post-tags li:last-child {
 
 .article-post .post-image {
   position: relative;
+
 }
 
 .article-post .post-image a {
