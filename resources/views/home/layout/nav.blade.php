@@ -76,18 +76,18 @@
                                              <div class="news-post standart-post">
                                                  <div class="post-image">
                                                      <a href="">
-                                                         <img src="{{ asset('home/upload/blog/s25.jpg') }}"
-                                                             alt="">
+                                                         <img src="{{ asset('upload/noticias/' . $item->img) }}"
+                                                             alt="" style="height: 150px;">
                                                      </a>
                                                      <a href="index.html#"
                                                          class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
                                                  <h2><a href="single-post.html">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
-                                                    <li>
-                                                        <i class="lnr lnr-user"></i>
-                                                        <a href="#">Renata da Silva</a>
-                                                    </li>
+                                                     <li>
+                                                         <i class="lnr lnr-user"></i>
+                                                         <a href="#">Renata da Silva</a>
+                                                     </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                                  comments</span></a></li> --}}
                                                  </ul>
@@ -138,85 +138,33 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link tech" href="index.html#">Maranhão <i class="fa fa-angle-down"
+                         <a class="nav-link tech" href="#">Maranhão <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <div class="row">
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s37.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tennis</a>
+                                     @foreach ($maranhao as $item)
+                                         <div class="col-lg-3 col-md-6">
+                                             <div class="news-post standart-post">
+                                                 <div class="post-image">
+                                                     <a href="">
+                                                         <img src="{{ asset('upload/noticias/' . $item->img) }}"
+                                                             alt="" style="height: 150px;">
+                                                     </a>
+                                                     <a href="#"
+                                                         class="category category-tech">{{ $item->categoria->name }}</a>
+                                                 </div>
+                                                 <h2><a href="#">{{ $item->title }}</a></h2>
+                                                 <ul class="post-tags">
+                                                     <li><i class="lnr lnr-user"></i><a href="index.html#">Renata
+                                                             Silva</a>
+                                                     </li>
+                                                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
+                                                            comments</span></a></li> --}}
+                                                 </ul>
                                              </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
                                          </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s38.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s39.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li>
-                                                     <i class="lnr lnr-user"></i>
-                                                     <a href="#">Renata da Silva</a>
-                                                 </li>
-                                                 {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li> --}}
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <div class="col-lg-3 col-md-6">
-                                         <div class="news-post standart-post">
-                                             <div class="post-image">
-                                                 <a href="https://nunforest.com/minberi-mag/single-post">
-                                                     <img src="{{ asset('home/upload/blog/s2.jpg') }}"
-                                                         alt="">
-                                                 </a>
-                                                 <a href="index.html#" class="category category-tech">Tech</a>
-                                             </div>
-                                             <h2><a href="single-post.html">Travelling is part of our life</a></h2>
-                                             <ul class="post-tags">
-                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">John Doe</a>
-                                                 </li>
-                                                 <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                             comments</span></a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
+                                     @endforeach
                                  </div>
                              </div>
                          </div>
@@ -239,41 +187,40 @@
                                                  </div>
                                                  <h2><a href="single-post.html">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
-                                                    <li>
-                                                        <i class="lnr lnr-user"></i>
-                                                        <a href="#">Renata da Silva</a>
-                                                    </li>
+                                                     <li>
+                                                         <i class="lnr lnr-user"></i>
+                                                         <a href="#">Renata da Silva</a>
                                                      </li>
-                                                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
+                     </li>
+                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
                                                                  comments</span></a></li> --}}
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                     @endforeach
-                                 </div>
-                             </div>
-                         </div>
-                     </li>
-
-                     <li class="nav-item drop-link">
-                         <a class="nav-link food" href="index.html#">Cidade <i class="fa fa-angle-down"
-                                 aria-hidden="true"></i></a>
-                         <ul class="dropdown">
-                             @foreach ($cidades as $item)
-                                 <li><a href="author-list.html">{{ $item->name }}</a></li>
-                             @endforeach
-                         </ul>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link fashion" href="">Denuncia</a>
-                     </li>
                  </ul>
-                 <form class="form-inline my-2 my-lg-0">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
-                             class="fa fa-search"></i></button>
-                 </form>
              </div>
+         </div>
+         @endforeach
+         </div>
+         </div>
+         </div>
+         </li>
+
+         <li class="nav-item drop-link">
+             <a class="nav-link food" href="index.html#">Cidade <i class="fa fa-angle-down"
+                     aria-hidden="true"></i></a>
+             <ul class="dropdown">
+                 @foreach ($cidades as $item)
+                     <li><a href="author-list.html">{{ $item->name }}</a></li>
+                 @endforeach
+             </ul>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link fashion" href="">Denuncia</a>
+         </li>
+         </ul>
+         <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+             <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+         </form>
+         </div>
          </div>
      </nav>
  </header>

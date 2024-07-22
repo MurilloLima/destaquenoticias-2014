@@ -51,7 +51,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget featured-widget">
-                            <h1>POSTS EM DESTAQUE</h1>
+                            <h1>NOTÍCIA EM DESTAQUE</h1>
                             <div class="news-post standart-post">
                                 <div class="post-image">
                                     <a href="">
