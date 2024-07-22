@@ -25,7 +25,8 @@ class HomeController extends Controller
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $categorias = Categoria::all();
         $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
-        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem'));
+        $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
+        return view('home.pages.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape'));
     }
 
     /**
