@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class NoticiaController extends Controller
 {
