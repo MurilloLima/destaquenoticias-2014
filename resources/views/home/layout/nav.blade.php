@@ -20,7 +20,7 @@
                              <a href="">Contatos</a>
                          </li>
                          <li>
-                             <a href="index.html#" data-toggle="modal" data-target="#loginModal">Login</a>
+                             <a href="{{ route('login') }}">Login</a>
                          </li>
                      </ul>
                  </div>
@@ -39,12 +39,12 @@
 
      <div class="header-banner-place">
          <div class="container">
-             <a class="navbar-brand" href="index.html">
+             <a class="navbar-brand" href="/">
                  <img src="{{ asset('home/images/logo.png') }}" width="200" alt="">
              </a>
 
              <div class="advertisement">
-                 <a href="index.html#"><img src="{{ asset('home/upload/addsense/620x80.jpg') }}" alt=""></a>
+                 <a href="#"><img src="{{ asset('home/upload/addsense/620x80.jpg') }}" alt=""></a>
              </div>
          </div>
      </div>
@@ -58,28 +58,28 @@
 
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                         <a class="nav-link" href="index.html#">Home</a>
+                     <li class="nav-item">
+                         <a class="nav-link" href="/">Home</a>
                      </li>
 
                      <li class="nav-item">
-                         <a class="nav-link world" href="index.html#">Brasil <i class="fa fa-angle-down"
+                         <a class="nav-link world" href="#">Brasil <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
                                  <ul class="filter-list">
-                                     <li><a href="index.html#">Vizualizar todas</a></li>
+                                     <li><a href="#">Vizualizar todas</a></li>
                                  </ul>
                                  <div class="row">
                                      @foreach ($brasil as $item)
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
                                                  <div class="post-image">
-                                                     <a href="">
+                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                              alt="" style="height: 150px;">
                                                      </a>
-                                                     <a href="index.html#"
+                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}"
                                                          class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
                                                  <h2><a href="single-post.html">{{ $item->title }}</a></h2>
@@ -94,8 +94,6 @@
                                              </div>
                                          </div>
                                      @endforeach
-
-
                                  </div>
                              </div>
                          </div>
@@ -117,10 +115,10 @@
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                              alt="" style="width: 100%;" height="150px">
                                                      </a>
-                                                     <a href="index.html#"
+                                                     <a href="#"
                                                          class="category category-sport">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                                 <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i>
                                                          <a href="#">
@@ -156,7 +154,7 @@
                                                  </div>
                                                  <h2><a href="#">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
-                                                     <li><i class="lnr lnr-user"></i><a href="index.html#">Renata
+                                                     <li><i class="lnr lnr-user"></i><a href="#">Renata
                                                              Silva</a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
@@ -170,7 +168,7 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link tech" href="index.html#">Classificados <i class="fa fa-angle-down"
+                         <a class="nav-link tech" href="#">Classificados <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
@@ -204,7 +202,7 @@
          </li>
 
          <li class="nav-item drop-link">
-             <a class="nav-link food" href="index.html#">Cidade <i class="fa fa-angle-down"
+             <a class="nav-link food" href="#">Cidade <i class="fa fa-angle-down"
                      aria-hidden="true"></i></a>
              <ul class="dropdown">
                  @foreach ($cidades as $item)

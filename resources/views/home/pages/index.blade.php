@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- wide-news-heading
-                                                                                                                                               ================================================== -->
+                                                                                                                                                   ================================================== -->
     <div class="wide-news-heading">
 
         <div class="item main-news">
@@ -15,7 +15,8 @@
                             <div class="news-post large-image-post">
                                 <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                 <div class="hover-box">
-                                    <a href="#" class="category category">{{ $item->categoria->name }}</a>
+                                    <a href="{{ route('home.pages.view', [$item->slug]) }}"
+                                        class="category category">{{ $item->categoria->name }}</a>
                                     <h2><a href="#">{{ $item->title }}</a></h2>
                                     <ul class="post-tags">
                                         <li>
@@ -36,8 +37,9 @@
                 <div class="news-post image-post">
                     <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                     <div class="hover-box">
-                        <a href="#" class="category category-world">{{ $item->categoria->name }}</a>
-                        <h2><a href="#">{{ $item->title }}</h2>
+                        <a href="{{ route('home.pages.view', [$item->slug]) }}"
+                            class="category category-world">{{ $item->categoria->name }}</a>
+                        <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</h2>
                         <ul class="post-tags">
                             <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
                             {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23 comments</span></a></li> --}}
@@ -50,7 +52,7 @@
     <!-- End wide-news-heading -->
 
     <!-- content-section
-                                                                                                                                               ================================================== -->
+                                                                                                                                                   ================================================== -->
     <section id="content-section">
         <div class="container">
 
@@ -68,14 +70,14 @@
                                 <div class="col-sm-6">
                                     <div class="news-post standart-post">
                                         <div class="post-image">
-                                            <a href="">
+                                            <a href="{{ route('home.pages.view', [$item->slug]) }}">
                                                 <img src="{{ asset('/upload/noticias/' . $item->img) }}" alt=""
                                                     style="height: 200px">
                                             </a>
                                             <a href="#" class="category category-tech"
                                                 style="background-color: #1866CF;">{{ $item->categoria->name }}</a>
                                         </div>
-                                        <h2><a href="#">{{ $item->title }}</a></h2>
+                                        <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                         <ul class="post-tags">
                                             <li>
                                                 <i class="lnr lnr-user"></i>
@@ -107,14 +109,14 @@
                                     <div class="item">
                                         <div class="news-post standart-post">
                                             <div class="post-image">
-                                                <a href="">
+                                                <a href="{{ route('home.pages.view', [$item->slug]) }}">
                                                     <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                         style="height: 200px;" alt="">
                                                 </a>
                                                 <a href="#"
                                                     class="category category-fashion">{{ $item->categoria->name }}</a>
                                             </div>
-                                            <h2><a href="">{{ $item->title }}</a></h2>
+                                            <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                             <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>
                                             </ul>
@@ -143,7 +145,7 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="post-image">
-                                            <a href="">
+                                            <a href="{{ route('home.pages.view', [$item->slug]) }}">
                                                 <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                     style="height: 130px;" alt="">
                                             </a>
@@ -153,7 +155,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <h2>
-                                            <a href="">{{ $item->title }}</a>
+                                            <a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
                                         </h2>
                                         <ul class="post-tags">
                                             <li><i class="lnr lnr-user"></i><a href="#">Renata da silva</a></li>
@@ -230,11 +232,11 @@
                             <ul class="small-posts">
                                 @foreach ($random as $item)
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ route('home.pages.view', [$item->slug]) }}">
                                             <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                         </a>
                                         <div class="post-cont">
-                                            <h2><a href="#">{{ $item->title }}</a></h2>
+                                            <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                             {{-- <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
                                             </ul> --}}
