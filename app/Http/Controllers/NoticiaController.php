@@ -69,7 +69,7 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Noticia $noticia)
+    public function edit($id)
     {
         $noticia = Noticia::find($id);
         $cat = Categoria::all();
