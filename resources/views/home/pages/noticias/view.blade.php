@@ -67,7 +67,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="facebook">
+                                    <a href="https://www.facebook.com/people/Destaque-noticias/100090408518901/?paipv=0&eav=AfZvcACXtmgqpggpj9DwDfdYMDREmTUKrwzLna6m9-hydLz1hRmy5UdNBM5d8fk3nxQ" class="facebook">
                                         <i class="fa fa-facebook"></i>
                                         <span>3,460</span>
                                     </a>
@@ -93,7 +93,7 @@
                                 @foreach ($random as $item)
                                     <li>
                                         <a href="{{ route('home.pages.view', [$item->slug]) }}">
-                                            <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
+                                            <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 100%; height: 70px;" alt="">
                                         </a>
                                         <div class="post-cont">
                                             <h2><a
