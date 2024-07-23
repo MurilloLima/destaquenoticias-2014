@@ -1564,12 +1564,12 @@ ul.post-tags li:last-child {
 .standart-post .post-image {
   position: relative;
   margin-bottom: 14px;
-  
+
 }
 
 .standart-post .post-image a {
   display: block;
- 
+
 }
 
 .standart-post .post-image a img {
@@ -1655,7 +1655,7 @@ ul.post-tags li:last-child {
 .alternative-post .post-image {
   position: relative;
   margin-bottom: 10px;
- 
+
 }
 
 .alternative-post .post-image a {
@@ -1736,7 +1736,7 @@ ul.post-tags li:last-child {
   overflow: hidden;
   width: 387px;
   height: 183px;
- 
+
 }
 
 .image-post img {
@@ -1840,7 +1840,7 @@ ul.post-tags li:last-child {
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
- 
+
 }
 
 .large-image-post img {
@@ -3992,6 +3992,21 @@ footer .down-footer a.go-top {
 footer .down-footer a.go-top:hover {
   background: #00A7B3;
 }
+
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 99;
+}
+
 
 /*-------------------------------------------------*/
 /* =  Responsive Part

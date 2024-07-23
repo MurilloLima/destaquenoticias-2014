@@ -55,7 +55,8 @@
                             <div class="news-post standart-post">
                                 <div class="post-image">
                                     <a href="">
-                                        <img src="{{ asset('upload/noticias/' . $destaque->img) }}" alt="">
+                                        <img src="{{ asset('upload/noticias/' . $destaque->img) }}"
+                                            style="width: 100%; height: 120px;" alt="">
                                     </a>
                                     <a href="#"
                                         class="category category-travel">{{ $destaque->categoria->name }}</a>
@@ -101,4 +102,10 @@
 
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <a href="{{ route('home.pages.cadastro.index') }}" class="back-to-top">
+        {{-- divulgar --}}
+        <img src="{{ asset('home/images/avatar.png') }}" style="width: 70px" class="divulgar" alt="">
+    </a>
     <!-- End footer -->

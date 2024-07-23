@@ -110,7 +110,7 @@ class NoticiaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Noticia $noticia)
+    public function destroy($id)
     {
         $this->noticia->destroy($id);
         return redirect()->back()->with('msg', 'Deletada com sucesso!');
