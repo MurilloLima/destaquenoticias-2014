@@ -35,134 +35,11 @@
 
                     <!-- Advertisement -->
                     <div class="advertisement">
-                        <a href="single-post.html#"><img src="{{ asset('home/upload/addsense/620x80grey.jpg') }}"
-                                alt=""></a>
+                        <a href="single-post.html#">
+                            <img src="{{ asset('home/upload/addsense/620x80grey.jpg') }}" alt="">
+                        </a>
                     </div>
                     <!-- End Advertisement -->
-
-                    <!-- Posts-block -->
-                    <div class="posts-block featured-box">
-
-                        <div class="owl-wrapper">
-                            <div class="owl-carousel owl-theme" data-num="3" style="opacity: 1; display: block;">
-
-                                <div class="owl-wrapper-outer">
-                                    <div class="owl-wrapper"
-                                        style="width: 2530px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-
-                                        <div class="owl-item" style="width: 253px;">
-                                            <div class="item">
-                                                <div class="news-post standart-post">
-                                                    <div class="post-image">
-                                                        <a href="">
-                                                            <img src="{{ asset('home/upload/blog/s25.jpg') }}"
-                                                                alt="">
-                                                        </a>
-                                                        <a href="single-post.html#"
-                                                            class="category category-world">world</a>
-                                                    </div>
-                                                    <h2><a href="">Travelling is part of our life</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="lnr lnr-user"></i><a href="#">
-                                                                Renata da Silva
-                                                            </a>
-                                                        </li>
-                                                        {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>23
-                                                                    comments</span></a></li> --}}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 253px;">
-                                            <div class="item">
-                                                <div class="news-post standart-post">
-                                                    <div class="post-image">
-                                                        <a href="#">
-                                                            <img src="{{ asset('home/upload/blog/s26.jpg') }}"
-                                                                alt="">
-                                                        </a>
-                                                        <a href="single-post.html#" class="category category-food">food</a>
-                                                    </div>
-                                                    <h2><a href="">{{ $data->title }}</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="lnr lnr-user"></i><a href="single-post.html#">John
-                                                                Doe</a></li>
-                                                        {{-- <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>23
-                                                                    comments</span></a>
-                                                        </li> --}}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 253px;">
-                                            <div class="item">
-                                                <div class="news-post standart-post">
-                                                    <div class="post-image">
-                                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                                            <img src="upload/blog/s27.jpg" alt="">
-                                                        </a>
-                                                        <a href="single-post.html#" class="category">Politics</a>
-                                                    </div>
-                                                    <h2><a href="single-post.html">New alternatives are more productive</a>
-                                                    </h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="lnr lnr-user"></i>by <a href="single-post.html#">John
-                                                                Doe</a></li>
-                                                        <li><a href="single-post.html#"><i class="lnr lnr-book"></i><span>23
-                                                                    comments</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 253px;">
-                                            <div class="item">
-                                                <div class="news-post standart-post">
-                                                    <div class="post-image">
-                                                        <a href="https://nunforest.com/minberi-mag/single-post">
-                                                            <img src="upload/blog/s28.jpg" alt="">
-                                                        </a>
-                                                        <a href="single-post.html#"
-                                                            class="category category-travel">Travel</a>
-                                                    </div>
-                                                    <h2><a href="">Visiting antic countries is John Doe
-                                                            hobby.</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="lnr lnr-user"></i>by <a
-                                                                href="single-post.html#">John Doe</a></li>
-                                                        <li><a href="single-post.html#"><i
-                                                                    class="lnr lnr-book"></i><span>23 comments</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="owl-controls clickable">
-                                    <div class="owl-pagination">
-                                        <div class="owl-page active"><span class=""></span></div>
-                                        <div class="owl-page"><span class=""></span></div>
-                                    </div>
-                                    <div class="owl-buttons">
-                                        <div class="owl-prev"></div>
-                                        <div class="owl-next"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- End Posts-block -->
-
-                    <!-- comment area box -->
-
-                    <!-- End comment area box -->
-
-                    <!-- contact form box -->
-
-                    <!-- End contact form box -->
 
                 </div>
 
@@ -219,7 +96,9 @@
                                             <img src="{{ asset('upload/noticias/' . $item->img) }}" alt="">
                                         </a>
                                         <div class="post-cont">
-                                            <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                            <h2><a
+                                                    href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                            </h2>
                                             {{-- <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
                                             </ul> --}}
@@ -255,128 +134,20 @@
 
             <!-- more from news box -->
             <div class="more-from-news">
-                <h1>Weekly Top News</h1>
+                <h1>APOIO</h1>
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s1.jpg" alt="">
-                                </a>
+                    @foreach ($publicidade as $item)
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="news-post thumb-post">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img src="{{ asset('upload/publicidade/' . $item->img) }}" alt=""
+                                            style="width: 100%; height: 100px;">
+                                    </a>
+                                </div>
                             </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s3.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s6.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s8.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s9.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s10.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s12.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s15.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s16.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s18.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s23.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="https://nunforest.com/minberi-mag/single-post">
-                                    <img src="upload/blog/s24.jpg" alt="">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <!-- end more from news box -->

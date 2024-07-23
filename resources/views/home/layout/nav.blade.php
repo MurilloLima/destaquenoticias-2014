@@ -26,11 +26,11 @@
                  </div>
                  <div class="col-md-4 col-sm-3">
                      <ul class="social-icons">
-                         <li><a class="facebook" href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a class="twitter" href="index.html#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a class="google" href="index.html#"><i class="fa fa-google-plus"></i></a></li>
-                         <li><a class="linkedin" href="index.html#"><i class="fa fa-linkedin"></i></a></li>
-                         <li><a class="instagram" href="index.html#"><i class="fa fa-instagram"></i></a></li>
+                         <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                         <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                         <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
                      </ul>
                  </div>
              </div>
@@ -82,7 +82,7 @@
                                                      <a href="{{ route('home.pages.view', [$item->slug]) }}"
                                                          class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="single-post.html">{{ $item->title }}</a></h2>
+                                                 <h2><a href="">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
@@ -118,7 +118,9 @@
                                                      <a href="#"
                                                          class="category category-sport">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                                 <h2><a
+                                                         href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                 </h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i>
                                                          <a href="#">
@@ -189,36 +191,34 @@
                                                          <i class="lnr lnr-user"></i>
                                                          <a href="#">Renata da Silva</a>
                                                      </li>
+                                                 </ul>
+                                             </div>
+                                         </div>
+                                     @endforeach
+                                 </div>
+                             </div>
+                         </div>
                      </li>
-                     {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                                 comments</span></a></li> --}}
-                 </ul>
-             </div>
-         </div>
-         @endforeach
-         </div>
-         </div>
-         </div>
-         </li>
 
-         <li class="nav-item drop-link">
-             <a class="nav-link food" href="#">Cidade <i class="fa fa-angle-down"
-                     aria-hidden="true"></i></a>
-             <ul class="dropdown">
-                 @foreach ($cidades as $item)
-                     <li><a href="author-list.html">{{ $item->name }}</a></li>
-                 @endforeach
-             </ul>
-         </li>
-         <li class="nav-item">
-             <a class="nav-link fashion" href="">Denuncia</a>
-         </li>
-         </ul>
-         <form class="form-inline my-2 my-lg-0">
-             <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-             <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-         </form>
-         </div>
+                     <li class="nav-item drop-link">
+                         <a class="nav-link food" href="#">Cidade <i class="fa fa-angle-down"
+                                 aria-hidden="true"></i></a>
+                         <ul class="dropdown">
+                             @foreach ($cidades as $item)
+                                 <li><a href="author-list.html">{{ $item->name }}</a></li>
+                             @endforeach
+                         </ul>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link fashion" href="">Denuncia</a>
+                     </li>
+                 </ul>
+                 <form class="form-inline my-2 my-lg-0">
+                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
+                             class="fa fa-search"></i></button>
+                 </form>
+             </div>
          </div>
      </nav>
  </header>
