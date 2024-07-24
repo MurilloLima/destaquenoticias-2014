@@ -34,7 +34,8 @@
                                 <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li>
                             </ul>
                         </div>
-                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="" height="400">
+                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
+                            style="width: 100%; height: 350px;;">
                         <div class="text-boxes">
                             {!! $data->content !!}
                         </div>
