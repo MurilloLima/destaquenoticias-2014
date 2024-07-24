@@ -1,6 +1,14 @@
 @extends('home.layout.app')
 @section('title', 'view')
 @section('content')
+
+    <head>
+        <meta property="og:title" content="{{ $data->title }}" />
+        <meta property="og:type" content="video.movie" />
+        <meta property="og:url" content="https://www.destaquenoticias.com/{{ $data->slug }}" />
+        <meta property="og:image" content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img }}" />
+    </head>
+
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
 
@@ -23,7 +31,7 @@
                                 </li>
                                 <li>
                                     <a class="twitter"
-                                        href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/www.destaquenoticias.com/{{ $data->slug }}"><i
+                                        href="whatsapp://send?text={{ $data->title }}%20http%3A%2F%2Fwww.destaquenoticias/{{ $data->slug }}"><i
                                             class="fa fa-whatsapp" aria-hidden="true">
                                         </i>
                                         <span>Compartilhar whatsapp</span>

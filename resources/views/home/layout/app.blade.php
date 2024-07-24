@@ -46,6 +46,7 @@
     </script>
     <script src="{{ asset('home/js/gmap3.min.js') }}"></script>
     <script src="{{ asset('home/js/script.js') }}"></script>
+
 </body>
 
 </html>

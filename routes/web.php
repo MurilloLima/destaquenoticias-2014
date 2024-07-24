@@ -19,7 +19,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 Route::post('newsletter/', [HomeController::class, 'newsletter'])->name('home.newsletter');
 Route::get('contatos/', [HomeController::class, 'index'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contatos.store');
-Route::get('view/{slug}', [HomeController::class, 'view'])->name('home.pages.view');
+Route::get('/{slug}', [HomeController::class, 'view'])->name('home.pages.view');
 Route::get('noticias/{slug}', [HomeController::class, 'noticias'])->name('home.pages.noticias.index');
 Route::post('pagamento/', [HomeController::class, 'pagamento'])->name('home.pages.pagamento.store');
 Route::get('pagamento/qrcode/', [HomeController::class, 'qrcode'])->name('home.pages.pagamento.qrcode');
