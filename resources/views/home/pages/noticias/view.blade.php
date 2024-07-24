@@ -23,7 +23,7 @@
                                 </li>
                                 <li>
                                     <a class="twitter"
-                                        href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"><i
+                                        href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/{{ $data->slug }}"><i
                                             class="fa fa-whatsapp" aria-hidden="true">
                                         </i>
                                         <span>Compartilhar whatsapp</span>
