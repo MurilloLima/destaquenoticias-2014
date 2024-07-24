@@ -17,7 +17,7 @@
                                 <div class="hover-box">
                                     <a href="{{ route('home.pages.view', [$item->slug]) }}"
                                         class="category category">{{ $item->categoria->name }}</a>
-                                    <h2><a href="#">{{ $item->title }}</a></h2>
+                                    <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                     <ul class="post-tags">
                                         <li>
                                             <i class="lnr lnr-user"></i>

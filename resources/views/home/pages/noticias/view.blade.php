@@ -17,8 +17,10 @@
                         </ul>
                         <div class="share-post-box">
                             <ul class="share-box">
-                                <li><a class="facebook" href="single-post.html#"><i class="fa fa-facebook"></i><span>
-                                            Facebook</span></a></li>
+                                <li>
+                                    <a class="facebook" href="#"><i class="fa fa-facebook"></i><span>
+                                            Facebook</span></a>
+                                </li>
                                 <li>
                                     <a class="twitter"
                                         href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"><i
@@ -32,7 +34,7 @@
                                 <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li>
                             </ul>
                         </div>
-                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="">
+                        <img src="{{ asset('upload/noticias/' . $data->img) }}" alt="" height="400">
                         <div class="text-boxes">
                             {!! $data->content !!}
                         </div>
