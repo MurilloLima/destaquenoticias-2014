@@ -17,12 +17,18 @@
                         </ul>
                         <div class="share-post-box">
                             <ul class="share-box">
-                                <li><a class="facebook" href="single-post.html#"><i class="fa fa-facebook"></i><span>Share
-                                            on Facebook</span></a></li>
-                                <li><a class="twitter" href="single-post.html#"><i class="fa fa-twitter"></i><span>Share on
-                                            Twitter</span></a></li>
-                                <li><a class="google" href="single-post.html#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="linkedin" href="single-post.html#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a class="facebook" href="single-post.html#"><i class="fa fa-facebook"></i><span>
+                                            Facebook</span></a></li>
+                                <li>
+                                    <a class="twitter"
+                                        href="https://api.whatsapp.com/send?text=www.destaquenoticias.com/view/{{ $data->slug }}"><i
+                                            class="fa fa-whatsapp" aria-hidden="true">
+                                        </i>
+                                        <span>Compartilhar whatsapp</span>
+                                    </a>
+                                </li>
+                                <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a class="rss" href="single-post.html#"><i class="fa fa-rss"></i></a></li>
                             </ul>
                         </div>
@@ -67,7 +73,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/people/Destaque-noticias/100090408518901/?paipv=0&eav=AfZvcACXtmgqpggpj9DwDfdYMDREmTUKrwzLna6m9-hydLz1hRmy5UdNBM5d8fk3nxQ" class="facebook">
+                                    <a href="https://www.facebook.com/people/Destaque-noticias/100090408518901/?paipv=0&eav=AfZvcACXtmgqpggpj9DwDfdYMDREmTUKrwzLna6m9-hydLz1hRmy5UdNBM5d8fk3nxQ"
+                                        class="facebook">
                                         <i class="fa fa-facebook"></i>
                                         <span>3,460</span>
                                     </a>
@@ -93,7 +100,8 @@
                                 @foreach ($random as $item)
                                     <li>
                                         <a href="{{ route('home.pages.view', [$item->slug]) }}">
-                                            <img src="{{ asset('upload/noticias/' . $item->img) }}" style="width: 100%; height: 70px;" alt="">
+                                            <img src="{{ asset('upload/noticias/' . $item->img) }}"
+                                                style="width: 100%; height: 70px;" alt="">
                                         </a>
                                         <div class="post-cont">
                                             <h2><a
