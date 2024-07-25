@@ -1,5 +1,5 @@
 @extends('home.layout.app')
-@section('title', 'view')
+@section('title', $data->title)
 @section('content')
 
     <head>

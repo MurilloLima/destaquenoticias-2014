@@ -39,7 +39,7 @@ Route::post('assinatura/store', [DenunciaController::class, 'pagamento'])->name(
 Route::get('cadastro/', [CadastroController::class, 'index'])->name('home.pages.cadastro.index');
 
 //registro payment
-Route::post('register/user/', [RegisterController::class, 'store'])->name('home.pages.register.index');
+Route::post('register/user/', [RegisterController::class, 'store'])->name('home.pages.register.store');
 
 
 

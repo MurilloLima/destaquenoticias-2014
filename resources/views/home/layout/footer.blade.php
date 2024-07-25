@@ -124,7 +124,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="" method="post">
+                <form action="{{ route('home.pages.register.store') }}" method="post">
                     <div class="modal-body">
                       
                     </div>
