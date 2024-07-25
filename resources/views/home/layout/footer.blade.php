@@ -31,13 +31,13 @@
                             <ul class="small-posts">
                                 @foreach ($noticiasrodape as $item)
                                     <li>
-                                        <a href="{{ route('home.pages.view', [$item->slug]) }}">
+                                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                             <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                 style="width: 100%; height: 80px;">
                                         </a>
                                         <div class="post-cont">
                                             <h2><a
-                                                    href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                    href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                             </h2>
                                             <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i><a href="index.html#">Renata da
@@ -56,7 +56,7 @@
                             <h1>NOTÍCIA EM DESTAQUE</h1>
                             <div class="news-post standart-post">
                                 <div class="post-image">
-                                    <a href="{{ route('home.pages.view', [$destaque->slug]) }}">
+                                    <a href="{{ route('home.pages.noticias.view', [$destaque->slug]) }}">
                                         <img src="{{ asset('upload/noticias/' . $destaque->img) }}"
                                             style="width: 100%; height: 120px;" alt="">
                                     </a>
@@ -64,7 +64,7 @@
                                         class="category category-travel">{{ $destaque->categoria->name }}</a>
                                 </div>
                                 <h2><a
-                                        href="{{ route('home.pages.view', [$destaque->slug]) }}">{{ $destaque->title }}</a>
+                                        href="{{ route('home.pages.noticias.view', [$destaque->slug]) }}">{{ $destaque->title }}</a>
                                 </h2>
                                 <ul class="post-tags">
                                     <li><i class="lnr lnr-user"></i><a href="#">Renata da Silva</a></li>

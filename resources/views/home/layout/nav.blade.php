@@ -75,14 +75,14 @@
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
                                                  <div class="post-image">
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}">
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                              alt="" style="height: 150px;">
                                                      </a>
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}"
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                                          class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                                 <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
@@ -111,15 +111,15 @@
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
                                                  <div class="post-image" style="height: 100">
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}">
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                              alt="" style="width: 100%;" height="150px">
                                                      </a>
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}"
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                                          class="category category-sport">{{ $item->categoria->name }}</a>
                                                  </div>
                                                  <h2><a
-                                                         href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                         href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                                  </h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i>
@@ -147,14 +147,14 @@
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
                                                  <div class="post-image">
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}">
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                              alt="" style="height: 150px;">
                                                      </a>
-                                                     <a href="{{ route('home.pages.view', [$item->slug]) }}"
+                                                     <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                                          class="category category-tech">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                                 <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i><a href="#">Renata
                                                              Silva</a>

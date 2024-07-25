@@ -110,13 +110,13 @@
                             <ul class="small-posts">
                                 @foreach ($random as $item)
                                     <li>
-                                        <a href="{{ route('home.pages.view', [$item->slug]) }}">
+                                        <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                             <img src="{{ asset('upload/noticias/' . $item->img) }}"
                                                 style="width: 100%; height: 70px;" alt="">
                                         </a>
                                         <div class="post-cont">
                                             <h2><a
-                                                    href="{{ route('home.pages.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                    href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                             </h2>
                                             {{-- <ul class="post-tags">
                                                 <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
