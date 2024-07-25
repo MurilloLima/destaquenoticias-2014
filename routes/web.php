@@ -69,8 +69,10 @@ Route::middleware('auth')->group(function () {
     //publicidade
     Route::get('/admin/publicidade', [PublicidadeController::class, 'index'])->name('admin.pages.publicidade.index');
     Route::get('/admin/publicidade/create', [PublicidadeController::class, 'create'])->name('admin.pages.publicidade.create');
+    Route::get('admin/publicidade/edit/{id}', [PublicidadeController::class, 'edit'])->name('admin.pages.publicidade.edit');
     Route::post('/admin/publicidade/store', [PublicidadeController::class, 'store'])->name('admin.pages.publicidade.store');
-    Route::delete('admin/publicidade/delete/{id}', [PublicidadeController::class, 'destroy'])->name('admin.pages.publicidade.destroy');
+    Route::post('/admin/publicidade/update', [PublicidadeController::class, 'update'])->name('admin.pages.publicidade.update');
+    Route::get('admin/publicidade/delete/{id}', [PublicidadeController::class, 'destroy'])->name('admin.pages.publicidade.destroy');
 
     //depoimento
     Route::get('/admin/depoimento', [DepoimentoController::class, 'index'])->name('admin.pages.depoimento.index');

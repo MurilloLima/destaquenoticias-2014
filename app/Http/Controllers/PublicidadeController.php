@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class PublicidadeController extends Controller
 {
+    private $publicidade;
+    public function __construct(Publicidade $publicidade)
+    {
+        $this->publicidade = $publicidade;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data = Publicidade::orderby('id', 'DESC')->get();
+        return view('admin.pages.publicidade.index', compact('data'));
     }
 
     /**
@@ -20,7 +26,7 @@ class PublicidadeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.publicidade.create');
     }
 
     /**
@@ -28,7 +34,19 @@ class PublicidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required',
+        ]);
+
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('upload/publicidade'), $imageName);
+            $this->publicidade->name = $request->name;
+            $this->publicidade->img = $imageName;
+            $this->publicidade->save();
+            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+        }
     }
 
     /**
@@ -42,9 +60,10 @@ class PublicidadeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Publicidade $publicidade)
+    public function edit($id)
     {
-        //
+        $publicidade = Publicidade::find($id);
+        return view('admin.pages.publicidade.edit', compact('publicidade'));
     }
 
     /**
@@ -52,14 +71,33 @@ class PublicidadeController extends Controller
      */
     public function update(Request $request, Publicidade $publicidade)
     {
-        //
+        // upload de image
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
+            # code...
+            $image = $request->file('img');
+            // Define um aleatório para o arquivo baseado no timestamps atual
+            $name = uniqid(date('HisYmd'));
+
+            // Recupera a extensão do arquivo
+            $extension = $image->extension();
+
+            // Define finalmente o nome
+            $nameFile = "{$name}.{$extension}";
+            $publicidade = $this->publicidade->find($request->id);
+            $image->move(public_path('upload/publicidade'), $nameFile);
+            $publicidade->img = $nameFile;
+            $publicidade->name = $request->get('name');
+            $publicidade->update();
+            return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Publicidade $publicidade)
+    public function destroy($id)
     {
-        //
+        $this->publicidade->destroy($id);
+        return redirect()->back()->with('msg', 'Deletada com sucesso!');
     }
 }

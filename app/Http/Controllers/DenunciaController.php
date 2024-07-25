@@ -2,24 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Denuncia;
 use Illuminate\Http\Request;
 
 class DenunciaController extends Controller
 {
+    private $denuncia;
+    public function __construct(Denuncia $denuncia)
+    {
+        $this->denuncia = $denuncia;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        // menu
+        $cat = Categoria::orderBy('created_at', 'desc')->get();
+        return view('home.pages.denuncie.index', compact('cat'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function pagamento()
     {
-        //
+        $cat = Categoria::orderBy('created_at', 'desc')->get();
+        return view('home.pages.pagamento.index', compact('cat'));
     }
 
     /**
@@ -27,13 +37,20 @@ class DenunciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'assunto' => 'required',
+            'denuncia' => 'required',
+        ]);
+        $this->denuncia->assunto = $request->assunto;
+        $this->denuncia->denuncia = $request->denuncia;
+        $this->denuncia->save();
+        return redirect()->back()->with('msg', 'Denuncia enviada com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Denuncia $denuncia)
     {
         //
     }
@@ -41,7 +58,7 @@ class DenunciaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Denuncia $denuncia)
     {
         //
     }
@@ -49,7 +66,7 @@ class DenunciaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Denuncia $denuncia)
     {
         //
     }
@@ -57,7 +74,7 @@ class DenunciaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Denuncia $denuncia)
     {
         //
     }
