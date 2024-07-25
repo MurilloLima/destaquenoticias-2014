@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Depoimento;
 use Illuminate\Http\Request;
 
 class DepoimentoController extends Controller
 {
+    private $depoimento;
+    public function __construct(Depoimento $depoimento)
+    {
+        $this->depoimento = $depoimento;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data = Depoimento::orderBy('id', 'DESC')->get();
+        return view('admin.pages.depoimentos.index', compact('data'));
     }
 
     /**
@@ -19,7 +26,7 @@ class DepoimentoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.depoimentos.create');
     }
 
     /**
@@ -27,13 +34,21 @@ class DepoimentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'depoimento' => 'required',
+        ]);
+
+        $this->depoimento->name =  $request->name;
+        $this->depoimento->depoimento = $request->depoimento;
+        $this->depoimento->save();
+        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Depoimento $depoimento)
     {
         //
     }
@@ -41,7 +56,7 @@ class DepoimentoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Depoimento $depoimento)
     {
         //
     }
@@ -49,7 +64,7 @@ class DepoimentoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Depoimento $depoimento)
     {
         //
     }
@@ -57,8 +72,9 @@ class DepoimentoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $dep = Depoimento::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

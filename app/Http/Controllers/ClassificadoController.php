@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class ClassificadoController extends Controller
 {
+    private $class;
+    public function __construct(Classificado $class)
+    {
+        $this->class = $class;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data = Classificado::latest()->get();
+        return view('admin.pages.cliente.classificados.index', compact('data'));
     }
 
     /**
@@ -20,7 +26,8 @@ class ClassificadoController extends Controller
      */
     public function create()
     {
-        //
+        $cat = Categoriaclass::latest()->get();
+        return view('admin.pages.cliente.classificados.create', compact('cat'));
     }
 
     /**
@@ -28,15 +35,34 @@ class ClassificadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required',
+            'desc' => 'required',
+            'valor' => 'required',
+        ]);
+
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('upload/classificados'), $imageName);
+            $this->class->cat_id = $request->cat_id;
+            $this->class->title = $request->title;
+            $this->class->desc = $request->desc;
+            $this->class->valor = $request->valor;
+            $this->class->image = $imageName;
+            $this->class->save();
+            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Classificado $classificado)
+    public function show($id)
     {
-        //
+        $cat = CategoriaClassificadosController::latest()->get();
+        $data = Classificado::where('cat_id', '=', $id)->get();
+        return view('home.pages.classificados.view', compact('cat', 'data'));
     }
 
     /**
@@ -58,8 +84,9 @@ class ClassificadoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Classificado $classificado)
+    public function destroy($id)
     {
-        //
+        Classificado::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }

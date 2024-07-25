@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaClassificadosController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ClassificadoController;
 use App\Http\Controllers\DenunciaController;
@@ -30,9 +31,16 @@ Route::get('portarias/', [HomeController::class, 'portaria'])->name('home.pages.
 Route::get('contatos/', [HomeController::class, 'contatos'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contato.store');
 Route::get('licitacao/', [HomeController::class, 'licitacao'])->name('home.pages.licitacao.index');
+// classificados
+Route::get('classificados/', [HomeController::class, 'classificados'])->name('home.pages.classificados.index');
+Route::get('classificados/{slug}', [ClassificadoController::class, 'show'])->name('home.pages.show');
 
 // registro
 Route::post('cliente/store', [HomeController::class, 'store'])->name('home.pages.register.store');
+//denuncia
+Route::get('denuncia/', [DenunciaController::class, 'index'])->name('home.pages.denuncia.index');
+Route::get('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
+
 
 Route::get('download/', [HomeController::class, 'download'])->name('home.pages.download');
 
@@ -66,6 +74,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/classificados/store', [ClassificadoController::class, 'store'])->name('admin.pages.classificados.store');
     Route::delete('admin/classificados/delete/{id}', [ClassificadoController::class, 'destroy'])->name('admin.pages.classificadosdestroy');
 
+     //categorias classificados
+     Route::get('/admin/classificados/categorias', [CategoriaClassificadosController::class, 'index'])->name('admin.pages.classificados.categoria.index');
+     Route::post('/admin/classificados/categorias/store', [CategoriaClassificadosController::class, 'store'])->name('admin.pages.classificados.categoria.store');
+     Route::delete('/admin/classificados/destroy/{id}', [CategoriaClassificadosController::class, 'destroy'])->name('admin.pages.classificados.categoria.destroy');
+ 
     //publicidade
     Route::get('/admin/publicidade', [PublicidadeController::class, 'index'])->name('admin.pages.publicidade.index');
     Route::get('/admin/publicidade/create', [PublicidadeController::class, 'create'])->name('admin.pages.publicidade.create');
@@ -74,11 +87,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/publicidade/update', [PublicidadeController::class, 'update'])->name('admin.pages.publicidade.update');
     Route::get('admin/publicidade/delete/{id}', [PublicidadeController::class, 'destroy'])->name('admin.pages.publicidade.destroy');
 
-    //depoimento
+    //depoimentos
     Route::get('/admin/depoimento', [DepoimentoController::class, 'index'])->name('admin.pages.depoimento.index');
     Route::get('/admin/depoimento/create', [DepoimentoController::class, 'create'])->name('admin.pages.depoimento.create');
     Route::post('/admin/depoimento/store', [DepoimentoController::class, 'store'])->name('admin.pages.depoimento.store');
-    Route::delete('admin/depoimento/delete/{id}', [DepoimentoController::class, 'destroy'])->name('admin.pages.depoimento.destroy');
+    Route::get('admin/depoimento/delete/{id}', [DepoimentoController::class, 'destroy'])->name('admin.pages.depoimento.destroy');
 
     //denuncia
     Route::get('/admin/denuncia', [DenunciaController::class, 'index'])->name('admin.pages.denuncia.index');
