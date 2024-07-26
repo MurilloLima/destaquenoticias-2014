@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
 Route::get('noticias/', [HomeController::class, 'noticias'])->name('home.pages.noticias.index');
-Route::get('noticias/{slug}', [NoticiaController::class, 'view'])->name('home.pages.noticias.view');
+Route::get('/{slug}', [NoticiaController::class, 'view'])->name('home.pages.noticias.view');
 Route::get('portarias/', [HomeController::class, 'portaria'])->name('home.pages.portarias.index');
 Route::get('contatos/', [HomeController::class, 'contatos'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contato.store');
