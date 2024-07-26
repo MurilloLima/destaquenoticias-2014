@@ -62,7 +62,6 @@ class HomeController extends Controller
         $categorias = Categoria::all();
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $publicidade = Publicidade::all();
-
         return view('home.pages.noticias.view', compact('data', 'cat', 'outras', 'aletoria', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque', 'categorias', 'random', 'publicidade'));
     }
 

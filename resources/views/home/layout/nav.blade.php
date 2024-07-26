@@ -210,7 +210,7 @@
                          </ul>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link fashion" href="">Denuncie</a>
+                         <a class="nav-link fashion" href="{{ route('home.pages.denuncia.create') }}">Denuncie</a>
                      </li>
                  </ul>
                  <form class="form-inline my-2 my-lg-0">
