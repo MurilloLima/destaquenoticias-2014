@@ -174,15 +174,14 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 @if (auth()->user()->role == 2)
-                <li class="nav-item">
-                    <a href="{{ route('admin.pages.cliente.classificado.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-bars"></i>
-                        <p>
-                            Minhas divulgações
-                        </p>
-                    </a>
-                </li>
-
+                    <li class="nav-item">
+                        <a href="{{ route('admin.pages.cliente.classificado.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-bars"></i>
+                            <p>
+                                Minhas divulgações
+                            </p>
+                        </a>
+                    </li>
                 @else
                     <li class="nav-item">
                         <a href="{{ route('admin.pages.categoria.index') }}" class="nav-link">
@@ -242,9 +241,12 @@
                 </li> --}}
                 @endif
                 <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon far fa-circle text-info"></i>
-                        <p>Sair</p>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-danger form-control">
+                            <p>Sair</p>
+                        </button>
+                    </form>
                     </a>
                 </li>
             </ul>
