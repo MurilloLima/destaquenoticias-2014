@@ -21,20 +21,12 @@
 
                         <form id="contact-form">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <label for="name">Name*</label>
+                                <div class="col-md-12">
+                                    <label for="name">Assunto*</label>
                                     <input id="name" name="name" type="text">
                                 </div>
-                                <div class="col-md-4">
-                                    <label for="mail">E-mail*</label>
-                                    <input id="mail" name="mail" type="text">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="website">Website</label>
-                                    <input id="website" name="website" type="text">
-                                </div>
                             </div>
-                            <label for="comment">Assunto*</label>
+                            <label for="comment">Denuncia*</label>
                             <textarea id="comment" name="comment"></textarea>
                             <button type="submit" id="submit_contact">
                                 <i class="fa fa-paper-plane"></i> Enviar denunia
