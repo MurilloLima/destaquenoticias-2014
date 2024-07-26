@@ -121,18 +121,72 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Anuncie aqui! Cadastre-se</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastre-se e anuncie aqui!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <form action="{{ route('home.pages.register.store') }}" method="post">
+                    @csrf
                     <div class="modal-body">
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if ($errors->any())
+                                    <div class="alert alert-danger text-center" style="margin: 10px;">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li style="text-align: center">{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                @if (session('msg'))
+                                    <div class="row text-center">
+                                        <div class="col-md-12" \>
+                                            <div class="alert alert-success text-center"
+                                                style="color: white; margin: 10px;">
+                                                {{ session('msg') }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Nome completo</label>
+                                <input type="text" name="name" class="form-control">
+                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+
+                                <label for="">E-mail</label>
+                                <input type="text" name="email" class="form-control">
+                                <x-input-error :messages="$errors->get('enail')" class="mt-2" />
+
+                                <label for="">Senha</label>
+                                <input type="password" name="password" class="form-control">
+                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+
+                                <label for="">Repetir senha</label>
+                                <input type="password" name="password_confirmation" class="form-control">
+                                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+
+                                <div class="form-group">
+                                    <label for="exampleSelectRounded0">Selecione um plano</label>
+                                    <select class="form-control" name="plano">
+                                        <option value="Gratuito">Gratuito</option>
+                                        <option value="30 dias 39,90">30 dias 39,90</option>
+                                        <option value="90 dias 59,90">90 dias 59,90</option>
+                                        <option value="6 meses 69,90">6 meses 69,90</option>
+                                        <option value="12 meses 99,90">12 meses 99,90</option>
+                                    </select>
+                                    <input type="hidden" name="role" value="2">
+                                </div>
+                            </div>
+
+                        </div><br>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
                 </form>
             </div>
