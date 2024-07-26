@@ -38,7 +38,6 @@ Route::get('classificados/{slug}', [ClassificadoController::class, 'show'])->nam
 // registro
 Route::post('cliente/store', [HomeController::class, 'store'])->name('home.pages.register.store');
 //denuncia
-Route::get('denuncia/', [DenunciaController::class, 'index'])->name('home.pages.denuncia.index');
 Route::get('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
 
 

@@ -16,11 +16,13 @@
                                 O diário de notícias na internet trazendo notícias em geral.
                             </p>
                             <ul class="social-icons">
-                                <li><a class="facebook" href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="twitter" href="index.html#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="google" href="index.html#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="linkedin" href="index.html#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="instagram" href="index.html#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a class="facebook"
+                                        href="https://www.facebook.com/profile.php?id=100090408518901&paipv=0&eav=Afa9vIoaTtn8DF3Kc-IQFYBFWCdby_19D9jf9F8BoI_c4f3vhatO7coQjXawdB5yhA0"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -126,7 +128,7 @@
                 </div>
                 <form action="{{ route('home.pages.register.store') }}" method="post">
                     <div class="modal-body">
-                      
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
