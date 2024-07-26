@@ -49,7 +49,14 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin/noticias', [NoticiaController::class, 'index'])->name('admin.noticias.index');
+    //categoria
+    Route::get('/admin/categorias', [CategoriaController::class, 'index'])->name('admin.pages.categoria.index');
+    Route::get('/admin/categorias/create', [CategoriaController::class, 'create'])->name('admin.pages.categoria.create');
+    Route::post('/admin/categorias/store', [CategoriaController::class, 'store'])->name('admin.pages.categoria.store');
+    Route::get('admin/categorias/edit/{id}', [CategoriaController::class, 'edit'])->name('admin.pages.categorias.edit')->middleware(['auth']);;
+    Route::post('/admin/categoria/update', [CategoriaController::class, 'update'])->name('admin.pages.categoria.update');
+    Route::get('admin/categoria/delete/{id}', [CategoriaController::class, 'destroy'])->name('admin.pages.categoria.destroy')->middleware(['auth']);
+
     //licitacoes e contratos
     Route::get('/admin/licitacoes', [LicitacoeController::class, 'index'])->name('admin.licitacoes.index');
     Route::get('/admin/licitacoes/create', [LicitacoeController::class, 'create'])->name('admin.licitacoes.create');
