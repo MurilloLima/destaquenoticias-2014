@@ -85,6 +85,11 @@
                                     <li><a href="#">{{ $item->name }}</a></li>
                                 @endforeach
                             </ul>
+                            <br>
+                            <iframe
+                                src="https://api.wo-cloud.com/content/widget/?geoObjectKey=2582046&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius"
+                                name="CW2" scrolling="no" width="290" height="318" frameborder="0"
+                                style=""></iframe>
                         </div>
                     </div>
 

@@ -1,5 +1,18 @@
 @extends('home.layout.app')
 @section('title', $data->title)
+<meta property="og:audio" content="{{ asset('upload/noticias/') . $data->img }}" />
+<meta property="og:description" content="{{ asset('upload/noticias/') . $data->desc }}" />
+<meta property="og:determiner" content="the" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="IMDb" />
+<meta property="og:video" content="{{ asset('upload/noticias/') . $data->img }}" />
+<meta property="og:site_name" content="Destaque notícias">
+<meta property="og:title" content="{{ $data->title }}">
+<meta property="og:description" content="{{ $data->desc }}">
+<meta property="og:image" itemprop="image" content="{{ asset('upload/noticias/' . $data->img) }}">
+<meta property="og:type" content="website">
 @section('content')
 
     <head>
@@ -31,7 +44,7 @@
                                 </li>
                                 <li>
                                     <a class="twitter"
-                                        href="whatsapp://send?text={{ $data->title }}%20http%3A%2F%2Fwww.destaquenoticias/{{ $data->slug }}"><i
+                                        href="whatsapp://send?text={{ $data->title }}%20http%3A%2F%2Fdestaquenoticias.com/noticias/{{ $data->slug }}"><i
                                             class="fa fa-whatsapp" aria-hidden="true">
                                         </i>
                                         <span>Compartilhar whatsapp</span>
