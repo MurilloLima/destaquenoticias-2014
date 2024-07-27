@@ -44,7 +44,7 @@
                                 </li>
                                 <li>
                                     <a class="twitter"
-                                        href="whatsapp://send?text={{ $data->title }}%20http%3A%2F%2Fdestaquenoticias.com/noticias/{{ $data->slug }}"><i
+                                        href="whatsapp://send?text={{ $data->title }}%20http%3A%2F%2Fdestaquenoticias.com/{{ $data->slug }}"><i
                                             class="fa fa-whatsapp" aria-hidden="true">
                                         </i>
                                         <span>Compartilhar whatsapp</span>
