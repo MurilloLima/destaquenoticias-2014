@@ -20,7 +20,7 @@
                              <a href="">Contatos</a>
                          </li>
                          <li>
-                             <a href="{{ route('login') }}">Login</a>
+                             <a href=""  data-toggle="modal" data-target="#modalExemplo">Login</a>
                          </li>
                      </ul>
                  </div>
@@ -223,3 +223,64 @@
      </nav>
  </header>
  <!-- End Header -->
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true" style="z-index: 9999999">
+ <div class="modal-dialog" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <form action="{{ route('login') }}" method="post">
+             @csrf
+             <div class="modal-body">
+
+                 <div class="row">
+                     <div class="col-md-12">
+                         @if ($errors->any())
+                             <div class="alert alert-danger text-center" style="margin: 10px;">
+                                 <ul>
+                                     @foreach ($errors->all() as $error)
+                                         <li style="text-align: center">{{ $error }}</li>
+                                     @endforeach
+                                 </ul>
+                             </div>
+                         @endif
+                         @if (session('msg'))
+                             <div class="row text-center">
+                                 <div class="col-md-12" \>
+                                     <div class="alert alert-success text-center"
+                                         style="color: white; margin: 10px;">
+                                         {{ session('msg') }}
+                                     </div>
+                                 </div>
+                             </div>
+                         @endif
+                     </div>
+                     <div class="col-md-12">
+                         <label for="">E-mail</label>
+                         <input type="text" name="email" class="form-control">
+                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
+
+                         <label for="">Senha</label>
+                         <input type="password" name="password" class="form-control">
+                         <x-input-error :messages="$errors->get('enail')" class="mt-2" />
+
+                     </div>
+
+                 </div><br>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                 <button type="submit" class="btn btn-primary">Entrar</button>
+             </div>
+         </form>
+     </div>
+ </div>
+</div>
+

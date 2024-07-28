@@ -321,13 +321,13 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
-            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
+            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
+            1 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
         ),
         'Spatie\\Ignition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/ignition/src',
-            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
+            1 => __DIR__ . '/..' . '/spatie/ignition/src',
         ),
         'Spatie\\FlareClient\\' => 
         array (
@@ -583,7 +583,11 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Models\\Categoria' => __DIR__ . '/../..' . '/app/Models/Categoria.php',
+        'App\\Models\\CategoriaClassificados' => __DIR__ . '/../..' . '/app/Models/CategoriaClassificados.php',
         'App\\Models\\Classificado' => __DIR__ . '/../..' . '/app/Models/Classificado.php',
+        'App\\Models\\Denuncia' => __DIR__ . '/../..' . '/app/Models/Denuncia.php',
+        'App\\Models\\Depoimento' => __DIR__ . '/../..' . '/app/Models/Depoimento.php',
+        'App\\Models\\ImageClassificado' => __DIR__ . '/../..' . '/app/Models/ImageClassificado.php',
         'App\\Models\\Noticia' => __DIR__ . '/../..' . '/app/Models/Noticia.php',
         'App\\Models\\Publicidade' => __DIR__ . '/../..' . '/app/Models/Publicidade.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

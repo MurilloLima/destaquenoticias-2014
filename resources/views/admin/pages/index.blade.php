@@ -1,5 +1,7 @@
 @extends('admin.layout.app')
-@section('title', 'Home')
+@section('title', 'Dashboard')
+
+@section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -63,4 +65,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-@section('content')
+@endsection

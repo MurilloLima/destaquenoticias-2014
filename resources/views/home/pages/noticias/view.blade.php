@@ -1,5 +1,6 @@
 @extends('home.layout.app')
 @section('title', $data->title)
+
 <meta property="og:audio" content="{{ asset('upload/noticias/') . $data->img }}" />
 <meta property="og:description" content="{{ asset('upload/noticias/') . $data->desc }}" />
 <meta property="og:determiner" content="the" />
@@ -13,15 +14,8 @@
 <meta property="og:description" content="{{ $data->desc }}">
 <meta property="og:image" itemprop="image" content="{{ asset('upload/noticias/' . $data->img) }}">
 <meta property="og:type" content="website">
+
 @section('content')
-
-    <head>
-        <meta property="og:title" content="{{ $data->title }}" />
-        <meta property="og:type" content="video.movie" />
-        <meta property="og:url" content="https://www.destaquenoticias.com/{{ $data->slug }}" />
-        <meta property="og:image" content="https://www.destaquenoticias.com/upload/noticias/{{ $data->img }}" />
-    </head>
-
     <section id="content-section" style="transform: none;">
         <div class="container" style="transform: none;">
 
@@ -132,8 +126,8 @@
                                                     href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                             </h2>
                                             {{-- <ul class="post-tags">
-                                                <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
-                                            </ul> --}}
+                                            <li><i class="lnr lnr-user"></i>by <a href="index.html#">Author</a></li>
+                                        </ul> --}}
                                         </div>
                                     </li>
                                 @endforeach
