@@ -82,7 +82,9 @@
                                                      <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                                          class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                                 <h2><a
+                                                         href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                 </h2>
                                                  <ul class="post-tags">
                                                      <li>
                                                          <i class="lnr lnr-user"></i>
@@ -110,25 +112,24 @@
                                      @foreach ($esporte as $item)
                                          <div class="col-lg-3 col-md-6">
                                              <div class="news-post standart-post">
-                                                 <div class="post-image" style="height: 100">
+                                                 <div class="post-image">
                                                      <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">
                                                          <img src="{{ asset('upload/noticias/' . $item->img) }}"
-                                                             alt="" style="width: 100%;" height="150px">
+                                                             alt="" style="height: 150px;">
                                                      </a>
                                                      <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
-                                                         class="category category-sport">{{ $item->categoria->name }}</a>
+                                                         class="category category-world">{{ $item->categoria->name }}</a>
                                                  </div>
                                                  <h2><a
                                                          href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
                                                  </h2>
                                                  <ul class="post-tags">
-                                                     <li><i class="lnr lnr-user"></i>
-                                                         <a href="#">
-                                                             Renata da Silva
-                                                         </a>
+                                                     <li>
+                                                         <i class="lnr lnr-user"></i>
+                                                         <a href="#">Renata da Silva</a>
                                                      </li>
                                                      {{-- <li><a href="index.html#"><i class="lnr lnr-book"></i><span>23
-                                                                 comments</span></a></li> --}}
+                                                            comments</span></a></li> --}}
                                                  </ul>
                                              </div>
                                          </div>
@@ -154,7 +155,9 @@
                                                      <a href="{{ route('home.pages.noticias.view', [$item->slug]) }}"
                                                          class="category category-tech">{{ $item->categoria->name }}</a>
                                                  </div>
-                                                 <h2><a href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a></h2>
+                                                 <h2><a
+                                                         href="{{ route('home.pages.noticias.view', [$item->slug]) }}">{{ $item->title }}</a>
+                                                 </h2>
                                                  <ul class="post-tags">
                                                      <li><i class="lnr lnr-user"></i><a href="#">Renata
                                                              Silva</a>
@@ -227,60 +230,59 @@
 
  <!-- Modal cadastro-->
  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
- aria-hidden="true" style="z-index: 9999999">
- <div class="modal-dialog" role="document">
-     <div class="modal-content">
-         <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                 <span aria-hidden="true">&times;</span>
-             </button>
-         </div>
-         <form action="{{ route('login') }}" method="post">
-             @csrf
-             <div class="modal-body">
+     aria-hidden="true" style="z-index: 9999999">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <form action="{{ route('login') }}" method="post">
+                 @csrf
+                 <div class="modal-body">
 
-                 <div class="row">
-                     <div class="col-md-12">
-                         @if ($errors->any())
-                             <div class="alert alert-danger text-center" style="margin: 10px;">
-                                 <ul>
-                                     @foreach ($errors->all() as $error)
-                                         <li style="text-align: center">{{ $error }}</li>
-                                     @endforeach
-                                 </ul>
-                             </div>
-                         @endif
-                         @if (session('msg'))
-                             <div class="row text-center">
-                                 <div class="col-md-12" \>
-                                     <div class="alert alert-success text-center"
-                                         style="color: white; margin: 10px;">
-                                         {{ session('msg') }}
+                     <div class="row">
+                         <div class="col-md-12">
+                             @if ($errors->any())
+                                 <div class="alert alert-danger text-center" style="margin: 10px;">
+                                     <ul>
+                                         @foreach ($errors->all() as $error)
+                                             <li style="text-align: center">{{ $error }}</li>
+                                         @endforeach
+                                     </ul>
+                                 </div>
+                             @endif
+                             @if (session('msg'))
+                                 <div class="row text-center">
+                                     <div class="col-md-12" \>
+                                         <div class="alert alert-success text-center"
+                                             style="color: white; margin: 10px;">
+                                             {{ session('msg') }}
+                                         </div>
                                      </div>
                                  </div>
-                             </div>
-                         @endif
-                     </div>
-                     <div class="col-md-12">
-                         <label for="">E-mail</label>
-                         <input type="email" name="email" class="form-control">
-                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                             @endif
+                         </div>
+                         <div class="col-md-12">
+                             <label for="">E-mail</label>
+                             <input type="email" name="email" class="form-control">
+                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
-                         <label for="">Senha</label>
-                         <input type="password" name="password" class="form-control">
-                         <x-input-error :messages="$errors->get('enail')" class="mt-2" />
+                             <label for="">Senha</label>
+                             <input type="password" name="password" class="form-control">
+                             <x-input-error :messages="$errors->get('enail')" class="mt-2" />
 
-                     </div>
+                         </div>
 
-                 </div><br>
-             </div>
-             <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                 <button type="submit" class="btn btn-primary">Entrar</button>
-             </div>
-         </form>
+                     </div><br>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                     <button type="submit" class="btn btn-primary">Entrar</button>
+                 </div>
+             </form>
+         </div>
      </div>
  </div>
-</div>
-
