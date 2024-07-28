@@ -1,5 +1,5 @@
 @extends('home.layout.app')
-@section('title', $data->title)
+@section('title', '')
 
 <meta property="og:audio" content="{{ asset('upload/noticias/') . $data->img }}" />
 <meta property="og:description" content="{{ asset('upload/noticias/') . $data->desc }}" />

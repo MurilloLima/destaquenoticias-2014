@@ -562,6 +562,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\CategoriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriaController.php',
         'App\\Http\\Controllers\\ClassificadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClassificadoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\DenunciaController' => __DIR__ . '/../..' . '/app/Http/Controllers/DenunciaController.php',
         'App\\Http\\Controllers\\DepoimentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepoimentoController.php',
         'App\\Http\\Controllers\\Home\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Home/HomeController.php',

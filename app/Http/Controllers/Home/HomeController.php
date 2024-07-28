@@ -49,8 +49,23 @@ class HomeController extends Controller
      */
     public function view($slug)
     {
+        $data = Noticia::where('slug', '=', $slug)->first();
+        $cidades = Categoria::latest()->get();
+        $classificados = Classificado::latest()->get();
+        $noticias1 = Noticia::latest()->first();
+        $noticias6 = Noticia::latest()->limit(6)->get();
+        $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
+        $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
+        $noticiaslider = Noticia::latest()->limit(3)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
+        $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+        $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
 
-        return view('home.pages.noticias.view');
+        return view('home.pages.noticias.view', compact('data', 'cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**
@@ -72,8 +87,9 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function store(Request $request)
+    public function login(Request $request)
     {
+        return view('home.pages.login.index');
     }
 
     /**

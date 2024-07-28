@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaClassificados;
 use App\Models\Classificado;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class ClassificadoController extends Controller
      */
     public function create()
     {
-        $cat = Categoriaclass::latest()->get();
+        $cat = CategoriaClassificados::latest()->get();
         return view('admin.pages.cliente.classificados.create', compact('cat'));
     }
 

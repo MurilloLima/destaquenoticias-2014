@@ -20,7 +20,7 @@
                              <a href="">Contatos</a>
                          </li>
                          <li>
-                             <a href=""  data-toggle="modal" data-target="#modalExemplo">Login</a>
+                             <a href="" data-toggle="modal" data-target="#modalLogin">Login</a>
                          </li>
                      </ul>
                  </div>
@@ -225,8 +225,8 @@
  <!-- End Header -->
 
 
- <!-- Modal -->
- <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <!-- Modal cadastro-->
+ <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
  aria-hidden="true" style="z-index: 9999999">
  <div class="modal-dialog" role="document">
      <div class="modal-content">
@@ -264,7 +264,7 @@
                      </div>
                      <div class="col-md-12">
                          <label for="">E-mail</label>
-                         <input type="text" name="email" class="form-control">
+                         <input type="email" name="email" class="form-control">
                          <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
                          <label for="">Senha</label>

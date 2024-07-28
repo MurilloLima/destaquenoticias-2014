@@ -152,7 +152,7 @@
                 <img src="{{ asset('admin/dist/img/avatar.png') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+                {{-- <a href="#" class="d-block">{{ auth()->user()->name }}</a> --}}
             </div>
         </div>
 
@@ -173,65 +173,56 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-                @if (auth()->user()->role == 2)
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.cliente.classificado.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-bars"></i>
-                            <p>
-                                Minhas divulgações
-                            </p>
-                        </a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.categoria.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-bars"></i>
-                            <p>
-                                Categorias
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.classificados.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-bell"></i>
-                            <p>
-                                Classificados
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.noticias.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Notícias
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.publicidade.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-file"></i>
-                            <p>
-                                Publicidade
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.depoimento.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-comments"></i>
-                            <p>
-                                Depoimentos
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pages.denuncia.index') }}" class="nav-link">
-                            <i class="nav-icon fas fa-clock"></i>
-                            <p>
-                                Denuncias
-                            </p>
-                        </a>
-                    </li>
-                    {{-- <li class="nav-item">
+               
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.categoria.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-bars"></i>
+                        <p>
+                            Categorias
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.classificados.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-bell"></i>
+                        <p>
+                            Classificados
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.noticias.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Notícias
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.publicidade.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>
+                            Publicidade
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.depoimento.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-comments"></i>
+                        <p>
+                            Depoimentos
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.pages.denuncia.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-clock"></i>
+                        <p>
+                            Denuncias
+                        </p>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
@@ -239,7 +230,7 @@
                         </p>
                     </a>
                 </li> --}}
-                @endif
+                {{-- @endif --}}
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
