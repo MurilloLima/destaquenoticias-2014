@@ -48,7 +48,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body text-center">
-                                <img src="{{ asset('home/img/logo.png') }}" alt="">
+                                <img src="{{ asset('home/images/logo.png') }}" alt="">
                             </div>
 
                         </div>
