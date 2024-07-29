@@ -84,13 +84,6 @@ class HomeController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function login(Request $request)
-    {
-        return view('home.pages.login.index');
-    }
 
     /**
      * Remove the specified resource from storage.

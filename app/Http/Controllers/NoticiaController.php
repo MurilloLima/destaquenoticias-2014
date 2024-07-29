@@ -27,7 +27,6 @@ class NoticiaController extends Controller
 
     public function categoria($slug)
     {
-        dd($slug);
         $noticias = Noticia::orderBy('id', 'DESC')->paginate(50);
         return view('admin.pages.noticias.index', compact('noticias'));
     }

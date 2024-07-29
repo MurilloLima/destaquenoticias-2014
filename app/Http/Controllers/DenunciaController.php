@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Classificado;
 use App\Models\Denuncia;
 use App\Models\Noticia;
+use App\Models\Publicidade;
 use Illuminate\Http\Request;
 
 class DenunciaController extends Controller
@@ -20,15 +21,23 @@ class DenunciaController extends Controller
      */
     public function index()
     {
-        // menu
-        $cat = Categoria::orderBy('created_at', 'desc')->get();
+        $cidades = Categoria::latest()->get();
+        $classificados = Classificado::latest()->get();
+        $noticias1 = Noticia::latest()->first();
+        $noticias6 = Noticia::latest()->limit(6)->get();
         $brasil = Noticia::where('cat_id', '=', 6)->latest()->limit(4)->get();
         $esporte =  Noticia::where('cat_id', '=', 5)->latest()->limit(4)->get();
-        $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
-        $classificados = Classificado::latest()->get();
-        $cidades = Categoria::latest()->get();
+        $noticiaslider = Noticia::latest()->limit(3)->get();
+        $random = Noticia::inRandomOrder()->limit(10)->get();
+        $categorias = Categoria::all();
+        $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
-        return view('admin.pages.denuncia.index', compact('cat','brasil', 'outras', 'aletoria', 'esporte', 'maranhao', 'classificados', 'cidades', 'categorias'));
+        $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
+        $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
+
+        return view('home.pages.denuncie.index', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
+   
     }
 
     /**
@@ -88,9 +97,10 @@ class DenunciaController extends Controller
         $vejatambem =  Noticia::inRandomOrder()->limit(10)->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
         $destaque = Noticia::inRandomOrder()->first();
+        $publicidade = Publicidade::all();
         $maranhao =  Noticia::where('cat_id', '=', 2)->limit(4)->get();
 
-        return view('home.pages.denuncie.create', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'maranhao'));    
+        return view('home.pages.denuncie.create', compact('cidades', 'classificados', 'noticias1', 'noticias6', 'brasil', 'esporte', 'noticiaslider', 'random', 'categorias', 'vejatambem', 'noticiasrodape', 'destaque', 'publicidade', 'maranhao'));
     }
 
     /**

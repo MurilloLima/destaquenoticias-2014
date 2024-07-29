@@ -6,7 +6,6 @@
     <div class="container-fluid banner bg-secondary my-5" style="background-color: #FFFFFF !important;">
         <div class="container py-5">
 
-            <!-- <h2>Notícias</h2> -->
             <div class="row g-4 align-items-center" style="margin-top: 100px">
                 <div class="row">
                     <div class="col-12">
