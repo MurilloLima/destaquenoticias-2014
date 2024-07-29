@@ -46,7 +46,7 @@ Route::get('classificados/{slug}', [ClassificadoController::class, 'show'])->nam
 Route::get('cidade/{slug}', [CidadeController::class, 'index'])->name('home.pages.cidade.index');
 
 //denuncia
-Route::get('denuncia/', [DenunciaController::class, 'index'])->name('home.pages.denuncia.index');
+Route::get('denuncia/', [DenunciaController::class, 'create'])->name('home.pages.denuncia.create');
 Route::post('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
 
 //assinatura
