@@ -25,6 +25,12 @@ class NoticiaController extends Controller
         return view('admin.pages.noticias.index', compact('noticias'));
     }
 
+    public function categoria($slug)
+    {
+        dd($slug);
+        $noticias = Noticia::orderBy('id', 'DESC')->paginate(50);
+        return view('admin.pages.noticias.index', compact('noticias'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -80,7 +86,7 @@ class NoticiaController extends Controller
         $random = Noticia::inRandomOrder()->limit(10)->get();
         $publicidade = Publicidade::all();
         $data = Noticia::where('slug', '=', $slug)->first();
-        
+
 
         return view('home.pages.noticias.view', compact('data', 'cat', 'outras', 'aletoria', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque', 'categorias', 'random', 'publicidade'));
     }

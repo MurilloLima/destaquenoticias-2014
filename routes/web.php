@@ -29,8 +29,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 Route::post('newsletter/', [HomeController::class, 'newsletter'])->name('home.newsletter');
 Route::get('contatos/', [HomeController::class, 'index'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contatos.store');
+//noticias
+Route::get('categoria/{slug}', [NoticiaController::class, 'index'])->name('home.pages.noticias.index');
 Route::get('view/{slug}', [HomeController::class, 'view'])->name('home.pages.noticias.view');
 Route::get('noticias/{slug}', [HomeController::class, 'noticias'])->name('home.pages.noticias.index');
+
 Route::post('pagamento/', [HomeController::class, 'pagamento'])->name('home.pages.pagamento.store');
 Route::get('pagamento/qrcode/', [HomeController::class, 'qrcode'])->name('home.pages.pagamento.qrcode');
 
@@ -69,7 +72,7 @@ Route::middleware('auth')->group(function () {
     // informativo
     Route::get('/admin/info', [InformativoController::class, 'index'])->name('admin.pages.info.index');
     Route::post('/admin/info/update', [InformativoController::class, 'update'])->name('admin.pages.info.update');
-    // noticias
+    //noticias
     Route::get('/admin/noticias', [NoticiaController::class, 'index'])->name('admin.pages.noticias.index');
     Route::get('/admin/noticias/create', [NoticiaController::class, 'create'])->name('admin.pages.noticias.create');
     Route::post('/admin/noticias/store', [NoticiaController::class, 'store'])->name('admin.pages.noticias.store');
