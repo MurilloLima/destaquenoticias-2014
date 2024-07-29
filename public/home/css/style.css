@@ -3126,10 +3126,8 @@ ul.author-list>li .autor-box {
 
 ul.author-list>li .autor-box img {
   max-width: 100px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
+  max-height: 100px;
+  padding-right: 10px;
   float: left;
 }
 

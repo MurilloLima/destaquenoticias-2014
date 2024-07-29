@@ -208,7 +208,9 @@
                                  aria-hidden="true"></i></a>
                          <ul class="dropdown">
                              @foreach ($cidades as $item)
-                                 <li><a href="author-list.html">{{ $item->name }}</a></li>
+                                 <li><a
+                                         href="{{ route('home.pages.cidade.index', $item->slug) }}">{{ $item->name }}</a>
+                                 </li>
                              @endforeach
                          </ul>
                      </li>

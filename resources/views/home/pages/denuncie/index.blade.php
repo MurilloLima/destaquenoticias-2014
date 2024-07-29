@@ -2,33 +2,187 @@
 @section('title', 'Denuncie')
 
 @section('content')
-    <!-- Section Start-->
-    <div class="container-fluid banner bg-secondary my-5" style="background-color: #FFFFFF !important;">
-        <div class="container py-5">
+    <section id="content-section" style="transform: none;">
+        <div class="container" style="transform: none;">
 
-            <div class="row g-4 align-items-center" style="margin-top: 100px">
-                <div class="row">
-                    <div class="col-12">
-                        @if (session('msg'))
-                            <div class="alert alert-success text-center">
-                                {{ session('msg') }}
+            <div class="row" style="transform: none;">
+                <div class="col-lg-8">
+
+                    <!-- contact info box -->
+                    <div class="contact-info-box">
+                        <div class="title-section">
+                            <h1><span>Denuncie</span></h1>
+                        </div>
+                        <p>
+                            A partir de agora você entrou num ambiente seguro, com certificação digital, para que
+                            possa fazer suas denúncias com total tranquilidade.
+                        </p>
+
+                    </div>
+                    <!-- End contact info box -->
+
+                    <!-- contact form box -->
+                    <div class="contact-form-box">
+                        <div class="title-section">
+                            {{-- <h1><span>Talk to us</span></h1> --}}
+                        </div>
+                        <form action="{{ route('home.pages.denuncia.store') }}" method="POST" id="contact-form">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="name">Nome*</label>
+                                    <input id="name" name="name" type="text">
+                                </div>
                             </div>
-                        @endif
+                            <label for="comment">Denuncia*</label>
+                            <textarea id="comment" name="content"></textarea>
+                            <button type="submit">
+                                <i class="fa fa-paper-plane"></i> Enviar
+                            </button>
+                            <div id="msg" class="alert"></div>
+                        </form>
+                    </div>
+                    <!-- End contact form box -->
+
+                </div>
+
+                @include('home.layout.sidebar')
+            </div>
+
+            <!-- Advertisement -->
+            <div class="advertisement">
+                <a href="#"><img src="upload/addsense/620x80grey@2x.jpg" alt="" width="620"
+                        height="80"></a>
+            </div>
+            <!-- End Advertisement -->
+
+            <!-- more from news box -->
+            <div class="more-from-news">
+                <h1>Weekly Top News</h1>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s1@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s3@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s6@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s8@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s9@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s10@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s12@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s15@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s16@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s18@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s23@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="news-post thumb-post">
+                            <div class="post-image">
+                                <a href="single-post">
+                                    <img src="upload/blog/s24@2x.jpg" alt="" width="150" height="94">
+                                </a>
+                            </div>
+                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
+                        </div>
                     </div>
                 </div>
-                <h2>Web Denúncia</h2>
-                <p>A partir de agora você entrou num ambiente seguro, com certificação digital, para que
-                    possa fazer suas denúncias com total tranquilidade.</p>
-                <form action="{{ route('home.pages.denuncia.store') }}" method="post">
-                    @csrf
-                    <label for="">Assunto</label>
-                    <input type="text" name="assunto" class="form-control">
-                    <label for="">Denuncia</label>
-                    <textarea name="denuncia" class="form-control" cols="30" rows="10"></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
             </div>
+            <!-- end more from news box -->
         </div>
-    </div>
-    <!-- Section End -->
+    </section>
 @endsection

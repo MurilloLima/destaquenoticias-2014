@@ -3,6 +3,7 @@
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\CategoriaClassificadosController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\ClassificadoController;
 use App\Http\Controllers\DenunciaController;
 use App\Http\Controllers\DepoimentoController;
@@ -41,9 +42,13 @@ Route::get('pagamento/qrcode/', [HomeController::class, 'qrcode'])->name('home.p
 Route::get('classificados/', [HomeController::class, 'classificados'])->name('home.pages.classificados.index');
 Route::get('classificados/{slug}', [ClassificadoController::class, 'show'])->name('home.pages.show');
 
+//cidade
+Route::get('cidade/{slug}', [CidadeController::class, 'index'])->name('home.pages.cidade.index');
+
+
 //denuncia
 Route::get('denuncia/', [DenunciaController::class, 'index'])->name('home.pages.denuncia.create');
-Route::get('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
+Route::post('denuncia/store', [DenunciaController::class, 'store'])->name('home.pages.denuncia.store');
 
 //assinatura
 Route::post('assinatura/store', [DenunciaController::class, 'pagamento'])->name('home.pages.pagamento.store');
@@ -69,9 +74,11 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/categorias/edit/{id}', [CategoriaController::class, 'edit'])->name('admin.pages.categorias.edit')->middleware(['auth']);;
     Route::post('/admin/categoria/update', [CategoriaController::class, 'update'])->name('admin.pages.categoria.update');
     Route::get('admin/categoria/delete/{id}', [CategoriaController::class, 'destroy'])->name('admin.pages.categoria.destroy')->middleware(['auth']);
+    
     // informativo
     Route::get('/admin/info', [InformativoController::class, 'index'])->name('admin.pages.info.index');
     Route::post('/admin/info/update', [InformativoController::class, 'update'])->name('admin.pages.info.update');
+
     //noticias
     Route::get('/admin/noticias', [NoticiaController::class, 'index'])->name('admin.pages.noticias.index');
     Route::get('/admin/noticias/create', [NoticiaController::class, 'create'])->name('admin.pages.noticias.create');

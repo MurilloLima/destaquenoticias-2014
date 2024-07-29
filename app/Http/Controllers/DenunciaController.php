@@ -55,11 +55,11 @@ class DenunciaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'assunto' => 'required',
-            'denuncia' => 'required',
+            'name' => 'required',
+            'content' => 'required',
         ]);
-        $this->denuncia->assunto = $request->assunto;
-        $this->denuncia->denuncia = $request->denuncia;
+        $this->denuncia->assunto = $request->name;
+        $this->denuncia->denuncia = $request->content;
         $this->denuncia->save();
         return redirect()->back()->with('msg', 'Denuncia enviada com sucesso!');
     }
