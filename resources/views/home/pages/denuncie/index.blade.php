@@ -26,6 +26,15 @@
                         <div class="title-section">
                             {{-- <h1><span>Talk to us</span></h1> --}}
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if (session('msg'))
+                                    <div class="alert alert-success text-center">
+                                        {{ session('msg') }}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
                         <form action="{{ route('home.pages.denuncia.store') }}" method="POST" id="contact-form">
                             @csrf
                             <div class="row">
