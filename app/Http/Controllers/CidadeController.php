@@ -25,11 +25,10 @@ class CidadeController extends Controller
         $cidades = Categoria::latest()->get();
         $noticiasrodape = Noticia::inRandomOrder()->limit(3)->get();
         $destaque = Noticia::inRandomOrder()->first();
-
         $categorias = Categoria::all();
         $publicidade = Publicidade::all();
-
-        return view('home.pages.noticias.index', compact('slug', 'data', 'random', 'categorias', 'publicidade', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque'));
+        $totalregistros = $data->count();
+        return view('home.pages.noticias.index', compact('slug', 'data', 'random', 'categorias', 'publicidade', 'brasil', 'esporte', 'maranhao', 'classificados', 'cidades', 'noticiasrodape', 'destaque', 'totalregistros'));
     }
 
     /**

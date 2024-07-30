@@ -51,7 +51,7 @@
                             </ul>
                         </div>
                         <img src="{{ asset('upload/noticias/' . $data->img) }}" alt=""
-                            style="width: 100%; height: 350px;;">
+                            style="width: 100%; height: 450px;;">
                         <div class="text-boxes">
                             {!! $data->content !!}
                         </div>

@@ -12,7 +12,7 @@
                     <!-- Posts-block -->
                     <div class="posts-block">
                         <div class="title-section">
-                            <h1><span>{{ $slug->name }}</span></h1>
+                            <h1><span>{{ $slug->name }} ({{ $totalregistros }})</span></h1>
                         </div>
 
                         <ul class="author-list">
