@@ -75,7 +75,9 @@
             <h1>Tags</h1>
             <ul class="tags-list">
                 @foreach ($categorias as $item)
-                    <li><a href="#">{{ $item->name }}</a></li>
+                    <li>
+                        <a href="{{ route('home.pages.cidade.index', $item->slug) }}">{{ $item->name }}</a>
+                    </li>
                 @endforeach
 
             </ul>
