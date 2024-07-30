@@ -42,7 +42,7 @@ Route::get('pagamento/qrcode/', [HomeController::class, 'qrcode'])->name('home.p
 Route::get('classificados/', [HomeController::class, 'classificados'])->name('home.pages.classificados.index');
 Route::get('classificados/{slug}', [ClassificadoController::class, 'show'])->name('home.pages.show');
 
-//cidade
+//categoria/cidades
 Route::get('cidade/{slug}', [CidadeController::class, 'index'])->name('home.pages.cidade.index');
 
 //denuncia
