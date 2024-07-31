@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaClassificados;
 use Illuminate\Http\Request;
 
 class CategoriaClassificadosController extends Controller
@@ -16,7 +17,7 @@ class CategoriaClassificadosController extends Controller
      */
     public function index()
     {
-        $cat = CategoriaClassificadosController::latest()->get();
+        $cat = CategoriaClassificados::latest()->get();
         return view('admin.pages.cliente.classificados.categorias.index', compact('cat'));
     }
 
