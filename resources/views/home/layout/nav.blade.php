@@ -63,7 +63,7 @@
                      </li>
 
                      <li class="nav-item">
-                         <a class="nav-link world" href="#">Brasil <i class="fa fa-angle-down"
+                         <a class="nav-link world" href="{{ route('home.pages.cidade.index', "brasil") }}">Brasil <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
@@ -101,7 +101,7 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link sport" href="#">Esporte <i class="fa fa-angle-down"
+                         <a class="nav-link sport" href="{{ route('home.pages.cidade.index', "esporte") }}">Esporte <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
@@ -139,7 +139,7 @@
                          </div>
                      </li>
                      <li class="nav-item">
-                         <a class="nav-link tech" href="#">Maranhão <i class="fa fa-angle-down"
+                         <a class="nav-link tech" href="{{ route('home.pages.cidade.index', "maranhao") }}">Maranhão <i class="fa fa-angle-down"
                                  aria-hidden="true"></i></a>
                          <div class="mega-posts-menu">
                              <div class="posts-line">
