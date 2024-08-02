@@ -60,135 +60,28 @@
 
             <!-- Advertisement -->
             <div class="advertisement">
-                <a href="#"><img src="upload/addsense/620x80grey@2x.jpg" alt="" width="620"
+                <a href="#">
+                    <img src="{{ asset('home/upload/addsense/620x80grey.jpg') }}" alt="" width="620"
                         height="80"></a>
             </div>
             <!-- End Advertisement -->
 
             <!-- more from news box -->
             <div class="more-from-news">
-                <h1>Weekly Top News</h1>
+                <h1>APOIO</h1>
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s1@2x.jpg" alt="" width="150" height="94">
-                                </a>
+                    @foreach ($publicidade as $item)
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="news-post thumb-post">
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img src="{{ asset('upload/publicidade/' . $item->img) }}" alt=""
+                                            style="width: 100%; height: 100px;">
+                                    </a>
+                                </div>
                             </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s3@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s6@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s8@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s9@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s10@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s12@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s15@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s16@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s18@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s23@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="news-post thumb-post">
-                            <div class="post-image">
-                                <a href="single-post">
-                                    <img src="upload/blog/s24@2x.jpg" alt="" width="150" height="94">
-                                </a>
-                            </div>
-                            <h2><a href="single-post.html">Duis aute irure dolor in reprehenderit in voluptate</a></h2>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <!-- end more from news box -->
